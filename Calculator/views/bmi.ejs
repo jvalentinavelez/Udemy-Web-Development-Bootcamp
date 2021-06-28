@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<a type="button" class="btn btn-outline-dark bmi" href="/">Sum Calculator</a>
+<div class="card text-center">
+  <div class="card-body">
+  <h5 class="card-title">BMI Calculator</h5>
+  <form action="/bmicalculator" method="post">
+    <input class="input" type="text" name="weight" placeholder="Enter your weight (kg)">
+    <input class="input" type="text" name="height" placeholder="Enter your height (m)">
+    <button class="btn btn-outline-primary" type="submit" name="submit">Calculate BMI</button>
+  </form>
+  <%if(calculate === true){%>
+    <p class="result"> The result of the calculation is: <%= sum %></p>
+  <%}%>
+</div>
+<%- include('partials/footer') %>
